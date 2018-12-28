@@ -5,4 +5,4 @@ here to remind me.
 
 ## To do ##
 
-* How to revert commits on a separate branch
+* [How to remove commits on a separate branch](remove-commits.md)
