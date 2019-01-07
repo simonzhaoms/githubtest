@@ -221,3 +221,8 @@ Then if we use `git rebase orgin/dev` instead of `git merge
 origin/deve` every time we want to incorporate changes from `dev` into
 `master`, then what happend must be a fast-forward.  Enjoy :smile:
 :tada:
+
+**PS** In order not to make trouble for my friends, I **should not**
+use `git push --force`, so in this situation, What's better is using
+`git merge origin/dev` instead of `git rebase origin/dev` and then
+`git push` would succeed without resort to `git push --force`.
