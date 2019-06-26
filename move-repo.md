@@ -19,8 +19,8 @@ the new one and make a new commit.
    old repo (it is usually called `origin` in your local repo) by `git
    pull`.
 
-2. Add the new repo as a new remote origin (`new-origin`) into your
-   local repo:
+2. Add the new repo (`git@github.com:user/repo.git`) as a new remote
+   origin (`new-origin`) into your local repo:
 
    ```console
    $ git remote add new-origin git@github.com:user/repo.git
@@ -50,6 +50,16 @@ the new one and make a new commit.
    $ git remote rm origin  # Remove origin
    $ git remote rename new-origin origin  # Change new-origin as origin
    ```
+   
+5. Set the default upsteam branch for your local branch:
+
+   ```console
+   $ git branch -u origin/master master
+   ```
+   
+   So that next time when you `git push`, all you updates on the
+   branch `master` will be pushed into `origin/master` which now
+   refers to `git@github.com:user/repo.git`.
 
 
 ## Reference ##
