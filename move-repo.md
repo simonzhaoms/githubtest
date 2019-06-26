@@ -18,15 +18,22 @@ the new one and make a new commit.
 1. Make sure you get the latest updates into your local repo from the
    old repo (it is usually called `origin` in your local repo) by `git
    pull`.
+   
+1. Make sure you have locally all the remote branch from the old repo
+   so that you can push them from local repo into the new repo:
+   
+   ```console
+   $ git checkout -b <branch> origin/<branch>
+   ```
 
-2. Add the new repo (`git@github.com:user/repo.git`) as a new remote
+1. Add the new repo (`git@github.com:user/repo.git`) as a new remote
    origin (`new-origin`) into your local repo:
 
    ```console
    $ git remote add new-origin git@github.com:user/repo.git
    ```
 
-3. Push all local branches and tags to the new repo (`new-origin`):
+1. Push all local branches and tags to the new repo (`new-origin`):
 
    ```console
    $ git push -all --force new-origin
@@ -44,14 +51,14 @@ the new one and make a new commit.
    $ git push new-origin --delete mytest
    ```
 
-4. Remove the old repo (`origin`) from you local repo:
+1. Remove the old repo (`origin`) from you local repo:
 
    ```console
    $ git remote rm origin  # Remove origin
    $ git remote rename new-origin origin  # Change new-origin as origin
    ```
    
-5. Set the default upsteam branch for your local branch:
+1. Set the default upsteam branch for your local branch:
 
    ```console
    $ git branch -u origin/master master
